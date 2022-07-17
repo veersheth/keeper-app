@@ -6,10 +6,15 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
+
+  function addNote(noteTitle, noteContent) {
+    console.log(noteContent);
+  }
+
   return (
     <div>
       <Header />
-      <CreateArea />
+      <CreateArea addNote={addNote}/>
       <Note key={1} title="Note title" content="Note content" />
       <Footer />
     </div>
