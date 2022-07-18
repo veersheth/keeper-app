@@ -7,7 +7,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background: rgb(226, 226, 226);
   padding: 0 16px;
 }
 
@@ -38,18 +38,27 @@ footer p {
 .note {
   background: #fff;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 0 2px 5px rgba(204, 204, 204, 0);
   padding: 10px;
   width: 240px;
   margin: 16px;
   float: left;
+  transition: box-shadow 0.2s;
 }
+
+.note:hover {
+  box-shadow: 0 3px 10px rgba(50, 50, 50, 0.142);
+}
+
 .note h1 {
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 600;
   margin-bottom: 6px;
+  color: rgb(40, 40, 40);
 }
 .note p {
-  font-size: 1.1em;
+  font-size: 0.9em;
+  color: rgb(62, 62, 62);
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -75,8 +84,14 @@ form {
   background: #fff;
   padding: 15px;
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  box-shadow: 0 1px 5px rgba(55, 55, 55, 0);
+  transition: transform .2s ease-in-out , box-shadow 0.2s ease-in-out;
 }
+
+form:hover {
+  box-shadow: 0 3px 10px rgba(50, 50, 50, 0.352);
+}
+
 form input,
 form textarea {
   width: 100%;
@@ -87,6 +102,16 @@ form textarea {
   font-family: inherit;
   resize: none;
 }
+
+.textAreaTitle {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.textAreaContent {
+  font-size: 0.95em;
+}
+
 form button {
   position: absolute;
   right: 18px;
@@ -97,7 +122,18 @@ form button {
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+form button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.421);
+}
+
+form button:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }

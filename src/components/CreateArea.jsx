@@ -20,6 +20,7 @@ function CreateArea(props) {
            placeholder="Title" 
            value={title}
            onChange={(event) => setTitle(event.target.value)}
+           className="textAreaTitle"
         />
              
         <textarea 
@@ -28,11 +29,12 @@ function CreateArea(props) {
           rows="3" 
           value={content}
           onChange={(event) => setContent(event.target.value)}
+          className="textAreaContent"
         />
         
         <button
           onClick={submitNote}
-        ><h2>+</h2></button>
+        ><h1>+</h1></button>
       </form>
     </div>
   );
