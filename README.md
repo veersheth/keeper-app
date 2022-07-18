@@ -1,3 +1,2 @@
 # Keeper
-A Google Keep Notes clone
-React based notes app
+Google Keep clone made with React
