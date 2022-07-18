@@ -7,8 +7,10 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.addNote(title, content)
+    setTitle("")
+    setContent("")
     event.preventDefault()
-  }
+  }  
 
   return (
     <div>
