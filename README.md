@@ -1,2 +1,2 @@
-# Keeper
-Google Keep clone made with React
+# keeper
+google keep clone made with react
